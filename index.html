@@ -10,6 +10,7 @@
             height: 100vh;
             background-color: #0d0221;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
@@ -17,15 +18,57 @@
         }
 
         .logo-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: url('logo.svg') no-repeat center center;
-            background-size: contain; /* Keeps the aspect ratio */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            width: 400px; /* Set a width to align with the text/logo */
+            max-width: 100%; /* Ensure it's responsive on smaller screens */
+        }
+
+        .button-container a, button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            text-align: center;
+            background-color: #b967ff;  /*  #01cdfe; */
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Make buttons the same width */
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .button-container a:hover, button:hover {
+            background-color: #ff71ce;/*#05ffa1; */
+        }
+
+        .calendly-container a {
+            background-color: #ff71ce;
+            margin-bottom: 0; /* Remove extra margin at the bottom */
+        }
+
+        .calendly-container a:hover {
+            background-color: #b967ff;
         }
     </style>
 </head>
 <body>
-    <div class="logo-container"></div>
+    <div class="logo-container">
+        <!-- Embedded SVG logo -->
+        <img src="logo.svg" alt="complemental.ai logo">
+    </div>
+
+    <!-- Notify Me and Book a Call buttons -->
+    <div class="button-container">
+        <a href="https://tally.so/r/mRJW89" target="_blank">Notify Me</a>
+        <a href="https://calendly.com/founders-complemental/30min" target="_blank">Book a Call</a>
+    </div>
 </body>
 </html>
