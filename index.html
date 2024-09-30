@@ -21,12 +21,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 0 20px; /* Ensures the logo has space around it */
         }
 
         .button-container {
             margin-top: 30px;
-            width: 400px; /* Set a width to align with the text/logo */
-            max-width: 100%; /* Ensure it's responsive on smaller screens */
+            width: 400px;
+            max-width: 100%;
+            padding: 0 20px; /* Default padding for desktop */
         }
 
         .button-container a, button {
@@ -35,7 +37,7 @@
             font-size: 1rem;
             border: none;
             text-align: center;
-            background-color: #b967ff;  /*  #01cdfe; */
+            background-color: #b967ff;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
@@ -46,16 +48,22 @@
         }
 
         .button-container a:hover, button:hover {
-            background-color: #ff71ce;/*#05ffa1; */
-        }
-
-        .calendly-container a {
             background-color: #ff71ce;
-            margin-bottom: 0; /* Remove extra margin at the bottom */
         }
 
-        .calendly-container a:hover {
-            background-color: #b967ff;
+        @media (max-width: 600px) {
+            .button-container {
+                width: 90%; /* Reduce the width of the buttons on small screens */
+                padding: 0; /* Remove extra padding */
+            }
+
+            .button-container a, button {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%; /* Full width with some margin */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
         }
     </style>
 </head>
